@@ -1,35 +1,62 @@
 class Calculator:
-    def __init__(self, first, second):
-        self.first = first
-        self.second = second
-        self.init()
-        print("The calculator has been started!")
+    print("The calculator has been started!")
 
-    def addition(self):
+    def __init__(self):
+        self.subtraction()
+        self.addition()
+        self.multiplication()
+        self.division()
+        self.integer()
+        self.modulus()
+        self.power()
+
+
+    def addition():
         print(first + second)
 
-    def subtraction(self):
+    def subtraction():
         print(first - second)
 
-    def multiplication(self):
+    def multiplication():
         print(first * second)
 
-    def division(self):
+    def division():
         print(first / second)
 
-    def integer(self):
+    def integer():
         print(first // second)
 
-    def modulus(self):
+    def modulus():
         print(first % second)
 
-    def power(self):
+    def power():
         print(first ** second)
-
 
 first = float(input("Set first value: "))
 second = float(input("Set second value: "))
-aritmatic = input("What are going to calculate? (+) (-) (*) (/) (//) (%) (**)?:  ")
+calculations = str(input("What are going to calculate? (+) (-) (*) (/) (//) (%) (**)?:  "))
 
-if aritmatic == "+":
-    print()
+print( "Twoje wartości to:")
+print( "                    - pierwsza wartość =  ", str(first))
+print( "                    - druga wartość    =  ", str(second))
+print( "Wybrałeś działanie: "+str(calculations))
+
+if calculations == "+":
+    print(Calculator.addition())
+    print("To działa!")
+    print(first + second)
+elif calculations == "-":
+    print(Calculator.subtraction())
+elif calculations == "*":
+    print(Calculator.multiplication())
+elif calculations == "/":
+    print(Calculator.division())
+elif calculations == "//":
+    print(Calculator.integer())
+elif calculations == "%":
+    print(Calculator.modulus())
+elif calculations == "**":
+    print(Calculator.power())
+
+
+
